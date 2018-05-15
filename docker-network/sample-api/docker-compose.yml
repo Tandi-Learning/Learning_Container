@@ -1,0 +1,8 @@
+version: '3.1'
+
+services:
+  sample-api:
+    image: sample-api:latest
+    # build: .
+    ports:
+      - "7070:3000"
