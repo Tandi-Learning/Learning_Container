@@ -12,5 +12,5 @@ FROM microsoft/aspnetcore
 # LABEL Name=sample-api Version=1.0.1
 WORKDIR /sample-api
 COPY --from=build-stage /publish .
-EXPOSE 5000
+EXPOSE 9090
 ENTRYPOINT [ "dotnet", "sample-api.dll" ]
