@@ -12,18 +12,42 @@ export default class Fruits extends Component
    }
 
    getFruits = () => {
-      fetch('http://localhost:5000/api/fruits', {
+      fetch('http://sample-api/api/fruits', {
          method: 'get',
          headers: {
             accept: 'application/json',
          }
       }).then(response => {
-         return response.json();
-      }).then(fruits => {
-         this.setState({
-            fruits: fruits
-         })
-      });
+         console.log("FIRST ATTEMPT WORKED");
+      }).catch(error => {
+         console.log("FIRST ATTEMPT FAILED");
+         console.log(error);
+      })
+
+      fetch('http://sample-api:9090/api/fruits', {
+         method: 'get',
+         headers: {
+            accept: 'application/json',
+         }
+      }).then(response => {
+         console.log("SECOND ATTEMPT WORKED");
+      }).catch(error => {
+         console.log("SECOND ATTEMPT FAILED");
+         console.log(error);
+      })         
+      // })
+      // fetch('http://localhost:9090/api/fruits', {
+      //    method: 'get',
+      //    headers: {
+      //       accept: 'application/json',
+      //    }
+      // }).then(response => {
+      //    return response.json();
+      // }).then(fruits => {
+      //    this.setState({
+      //       fruits: fruits
+      //    })
+      // });
    }
 
    render() {

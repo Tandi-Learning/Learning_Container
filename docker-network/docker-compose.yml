@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  sample-app:
+    image: dn/sample-app
+    container_name: sample-app
+    # build: .
+    # environment:
+    #   NODE_ENV: production
+    ports:
+      - 3000:3000
+  sample-api:
+    image: dn/sample-api
+    container_name: sample-api
+    # build: .
+    # environment:
+    #   NODE_ENV: production
+    # ports:
+    #   - 3000:3000
