@@ -1,17 +1,26 @@
 version: '3'
 
+networks: 
+  sample:
+
 services:
   sample-app:
-    image: dn/sample-app
+    image: sample-app
     container_name: sample-app
+    networks: 
+      - sample
     # build: .
     # environment:
     #   NODE_ENV: production
     ports:
       - 3000:3000
   sample-api:
-    image: dn/sample-api
+    image: sample-api
     container_name: sample-api
+    networks: 
+      - sample
+    ports:
+      - 9090:80
     # build: .
     # environment:
     #   NODE_ENV: production
