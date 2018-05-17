@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  sample-mvc:
+    image: sample-mvc
+    build: .
+    ports:
+      - 6000:6000

@@ -7,6 +7,7 @@ services:
   sample-app:
     image: sample-app
     container_name: sample-app
+    
     networks: 
       - sample
     # build: .
@@ -21,8 +22,10 @@ services:
       - sample
     ports:
       - 9090:80
-    # build: .
-    # environment:
-    #   NODE_ENV: production
-    # ports:
-    #   - 3000:3000
+  sample-mvc:
+    image: sample-mvc
+    container_name: sample-mvc
+    networks: 
+      - sample
+    ports:
+      - 8000:80

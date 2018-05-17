@@ -1,0 +1,10 @@
+/Users/tsunarto/Codes/Learning_Docker/docker-network/sample-mvc/obj/Debug/netcoreapp2.0/sample-mvc.csproj.CoreCompileInputs.cache
+/Users/tsunarto/Codes/Learning_Docker/docker-network/sample-mvc/obj/Debug/netcoreapp2.0/sample-mvc.AssemblyInfoInputs.cache
+/Users/tsunarto/Codes/Learning_Docker/docker-network/sample-mvc/obj/Debug/netcoreapp2.0/sample-mvc.AssemblyInfo.cs
+/Users/tsunarto/Codes/Learning_Docker/docker-network/sample-mvc/bin/Debug/netcoreapp2.0/sample-mvc.deps.json
+/Users/tsunarto/Codes/Learning_Docker/docker-network/sample-mvc/bin/Debug/netcoreapp2.0/sample-mvc.runtimeconfig.json
+/Users/tsunarto/Codes/Learning_Docker/docker-network/sample-mvc/bin/Debug/netcoreapp2.0/sample-mvc.runtimeconfig.dev.json
+/Users/tsunarto/Codes/Learning_Docker/docker-network/sample-mvc/bin/Debug/netcoreapp2.0/sample-mvc.dll
+/Users/tsunarto/Codes/Learning_Docker/docker-network/sample-mvc/bin/Debug/netcoreapp2.0/sample-mvc.pdb
+/Users/tsunarto/Codes/Learning_Docker/docker-network/sample-mvc/obj/Debug/netcoreapp2.0/sample-mvc.dll
+/Users/tsunarto/Codes/Learning_Docker/docker-network/sample-mvc/obj/Debug/netcoreapp2.0/sample-mvc.pdb
