@@ -4,13 +4,13 @@
 curl -fsSL https://get.docker.com/ | sh
 
 # Add the vagrant user to the docker group
-usermod -aG docker vagrant
+sudo usermod -aG docker vagrant
 
 # Configure the docker engine
 # Daemon options: https://docs.docker.com/engine/reference/commandline/dockerd/
 # Set both unix socket and tcp to make it easy to connect both locally and remote
 # You can add TLS for added security (docker-machine does this automagically)
-cat > /etc/docker/daemon.json <<END
+sudo cat > /etc/docker/daemon.json <<END
 {
     "hosts": [ 
         "unix://",
@@ -29,10 +29,10 @@ END
 #  - Removes docker.socket from After
 #  - Sets LimitNOFILE=infinity
 #  - Removes -H fd:// from ExecStart 
-wget -O /lib/systemd/system/docker.service https://raw.githubusercontent.com/docker/docker/v17.03.0-ce/contrib/init/systemd/docker.service.rpm
-systemctl daemon-reload
-systemctl restart docker
+sudo wget -O /lib/systemd/system/docker.service https://raw.githubusercontent.com/docker/docker/v17.03.0-ce/contrib/init/systemd/docker.service.rpm
+sudo systemctl daemon-reload
+sudo systemctl restart docker
 
 # optional tools for learning 
-apt-get install -y -q ipvsadm tree
+sudo apt-get install -y -q ipvsadm tree
 # lsns is helpful from util-linux, this is installed already
