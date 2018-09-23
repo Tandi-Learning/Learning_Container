@@ -10,4 +10,5 @@ services:
     environment: 
       - ACCEPT_EULA=Y
       - SA_PASSWORD=Password@2
-    
+    volumes: 
+      - $HOME/mssql:/var/opt/mssql

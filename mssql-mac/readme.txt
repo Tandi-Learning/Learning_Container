@@ -1,3 +1,10 @@
+docker run 
+    -e 'ACCEPT_EULA=Y' 
+    -e 'SA_PASSWORD=<YourStrong!Passw0rd>' 
+    -p 1433:1433 
+    -v /var/opt/mssql:/var/opt/mssql 
+    -d microsoft/mssql-server-linux
+
 // change the sa password and spinning out the sql container
 // ****************************************************************
 docker exec -it localsql /opt/mssql-tools/bin/sqlcmd \
@@ -10,3 +17,7 @@ docker exec -it localsql "bash"
 
 // connect to sql using sqlcmd from inside container
 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Password!1'
+
+
+// issue with using bind-mount to persist db
+https://github.com/Microsoft/mssql-docker/issues/12
