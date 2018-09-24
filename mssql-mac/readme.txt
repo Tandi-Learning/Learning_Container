@@ -21,3 +21,23 @@ docker exec -it localsql "bash"
 
 // issue with using bind-mount to persist db
 https://github.com/Microsoft/mssql-docker/issues/12
+
+
+
+// MSSQL on Linux using Docker for Mac
+// https://adilsoncarvalho.com/using-mssql-on-linux-using-docker-for-mac-a5d4ac81e57f
+// ****************************************************************
+
+
+docker create -v /var/opt/mssql --name mssql \
+  microsoft/mssql-server-linux \
+  /bin/true
+
+docker run \
+  -e ‘ACCEPT_EULA=Y’ \
+  -e ‘SA_PASSWORD=Password@2’ \
+  -p 1433:1433 \
+  --volumes-from mssql \
+  -d \
+  --name sql-server \
+  microsoft/mssql-server-linux
