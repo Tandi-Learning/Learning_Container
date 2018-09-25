@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+
+  mssql:
+    image: microsoft/mssql-server-windows-express
+    container_name: localsql
+    ports:
+      - 1433:1433
+    environment: 
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password@2
+    # volumes: 
+    #   - c:/codes/mssql:/var/opt/mssql
