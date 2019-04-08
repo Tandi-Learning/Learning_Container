@@ -3,12 +3,16 @@ version: "3.7"
 services:
 
   mssql:
-    image: microsoft/mssql-server-linux:2017-latest
+    image: microsoft/mssql-server-linux
     container_name: localsql
     ports:
       - 1433:1433
     environment: 
       - ACCEPT_EULA=Y
       - SA_PASSWORD=Password@2
-    volumes: 
-      - $HOME/mssql:/var/opt/mssql
+    volumes:
+      - db-data:/var/opt/mssql/data
+      # - $HOME/mssql:/var/opt/mssql
+
+volumes: 
+  db-data:

@@ -39,5 +39,10 @@ docker run \
   -p 1433:1433 \
   --volumes-from mssql \
   -d \
-  --name sql-server \
+  --name localsql \
   microsoft/mssql-server-linux
+
+
+docker run --rm -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password@2' --name localsql -p 1433:1433 -d microsoft/mssql-server-linux
+docker run --rm -v /Users/tsunarto/codes/Learning_Container/mssql-mac:/var/opt/mssql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password@2' --name localsql -p 1433:1433 -d microsoft/mssql-server-linux
+docker exec -it localsql "bash"
